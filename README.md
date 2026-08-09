@@ -1,5 +1,8 @@
 **PLEASE DO NOT USE REAL DATA, DEMO PURPOSES ONLY**
+
 **Pryora is an educational portfolio project created for learning and development purposes. It is not a commercial product or service.**
+
+This is a personal educational/demo project created for portfolio and learning purposes. The project is not operated as a commercial service. If the name or any other branding used in this project conflicts with an existing trademark or intellectual property right, please let me know and I will review and, where appropriate, change it.
 ---
 # ✅ Pryora: Full-Stack Task Management Application
 
