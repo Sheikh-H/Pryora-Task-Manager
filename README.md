@@ -1,7 +1,7 @@
 **PLEASE DO NOT USE REAL DATA, DEMO PURPOSES ONLY**
-**Priora is an educational portfolio project created for learning and development purposes. It is not a commercial product or service.**
+**Pryora is an educational portfolio project created for learning and development purposes. It is not a commercial product or service.**
 ---
-# ✅ Priora: Full-Stack Task Management Application
+# ✅ Pryora: Full-Stack Task Management Application
 
 <p align="center">
   <b>A full-stack task management application built with Flask, SQLite, JavaScript, and modern web development practices.</b><br>
@@ -12,19 +12,19 @@
 
 # 📘 Project Overview
 
-Priora is a full-stack task management application developed to demonstrate my progression from creating simple websites into building complete web applications with a backend, database, authentication system, and structured code architecture.
+Pryora is a full-stack task management application developed to demonstrate my progression from creating simple websites into building complete web applications with a backend, database, authentication system, and structured code architecture.
 
 The purpose of this project is to create a realistic productivity application where users can create accounts, manage personal tasks, track progress, and maintain a history of task activity.
 
 This project is built for **portfolio and educational purposes only**. It demonstrates my understanding of full-stack development concepts and is not intended to be used as a commercial productivity platform.
 
-The main goal behind Priora was not only to create a functional application, but to understand how real-world applications are structured, maintained, and secured.
+The main goal behind Pryora was not only to create a functional application, but to understand how real-world applications are structured, maintained, and secured.
 
 ---
 
 # 🚀 Development Journey
 
-Priora represents an important stage in my development journey because it combines the frontend skills I previously developed with new backend and software engineering concepts.
+Pryora represents an important stage in my development journey because it combines the frontend skills I previously developed with new backend and software engineering concepts.
 
 Earlier projects focused mainly on creating visually appealing websites using HTML, CSS, and JavaScript. While those projects helped me understand layouts, styling, responsiveness, and user interaction, I wanted to move towards building applications that could store data, manage users, and perform real operations.
 
@@ -53,7 +53,7 @@ This approach reflects how larger applications are often organised, where differ
 
 ## 👤 User Accounts
 
-Priora includes a complete authentication system allowing users to:
+Pryora includes a complete authentication system allowing users to:
 
 - Create an account.
 - Securely log in.
@@ -92,7 +92,7 @@ The application tracks task information including:
 
 ## 📋 Task History
 
-A major feature of Priora is task logging.
+A major feature of Pryora is task logging.
 
 The application records important task events, including:
 
@@ -123,10 +123,10 @@ JavaScript is used to improve user experience without replacing server-side vali
 
 # 🏗️ Application Architecture
 
-Priora follows a structured Flask application design by separating responsibilities into different files.
+Pryora follows a structured Flask application design by separating responsibilities into different files.
 
 ```
-Priora/
+Pryora/
 │
 ├── app.py                         # Main Flask application and route handling
 ├── requirements.txt               # Project dependencies
@@ -236,13 +236,13 @@ Separating this logic prevents app.py from becoming too large and difficult to m
 
 Security was an important learning area during this project.
 
-Although Priora is a portfolio project, I wanted to implement practices used in professional applications.
+Although Pryora is a portfolio project, I wanted to implement practices used in professional applications.
 
 ### Password Protection
 
 Passwords are never stored as plain text.
 
-Priora uses:
+Pryora uses:
 
 - Argon2 password hashing.
 - Secure password verification.
@@ -263,7 +263,7 @@ Implemented security features include:
 - Protected routes.
 - CSRF Protection
 
-Priora uses Flask-WTF CSRF protection.
+Pryora uses Flask-WTF CSRF protection.
 
 Sensitive actions require valid CSRF tokens, including:
 
@@ -309,7 +309,7 @@ This restricts where scripts, styles, and resources can be loaded from, helping 
 
 ## 🗄️ Database Design
 
-Priora uses three main database tables.
+Pryora uses three main database tables.
 
 ### Users Table
 
@@ -350,7 +350,7 @@ Clone the repository:
 
 Navigate into the project:
 
-`cd Priora`
+`cd Pryora`
 
 Create a virtual environment:
 
@@ -374,7 +374,7 @@ Run Flask:
 
 ## ☁️ Deployment
 
-Priora is designed to be deployed using platforms such as Render.
+Pryora is designed to be deployed using platforms such as Render.
 
 Production deployments can use Gunicorn:
 
