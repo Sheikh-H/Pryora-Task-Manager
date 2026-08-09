@@ -82,12 +82,12 @@
     background: linear-gradient(45deg, #CDFFD8, #94B9FF);
 }
 
-.about-priora {
+.about-Pryora {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.about-priora > div {
+.about-Pryora > div {
     display: flex;
     justify-content: center;
     text-align: center;
