@@ -1,4 +1,5 @@
 **PLEASE DO NOT USE REAL DATA, DEMO PURPOSES ONLY**
+**Priora is an educational portfolio project created for learning and development purposes. It is not a commercial product or service.**
 ---
 # ✅ Priora: Full-Stack Task Management Application
 
