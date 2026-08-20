@@ -1,54 +1,56 @@
+import os
+from datetime import datetime, timedelta
+
+from dotenv import load_dotenv
+from flask import (
+    Flask,
+    Response,
+    abort,
+    current_app,
+    flash,
+    redirect,
+    render_template,
+    request,
+    send_from_directory,
+    session,
+    url_for,
+)
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from flask_wtf.csrf import CSRFError, CSRFProtect
+
+from flask_session import Session
+from services.auth import (
+    create_user,
+    login_required,
+    login_user,
+    password_change,
+    password_reset,
+    password_reset_required,
+)
+from services.config import initialise
+from services.database import (
+    add_log,
+    add_new_task,
+    delete_task_by_id,
+    find_task_by_id,
+    find_user_by_id,
+    get_all_task_logs,
+    get_all_tasks,
+    get_completed_tasks,
+    get_incomplete_tasks,
+    get_task_logs,
+    search_for_tasks,
+    update_task_fields,
+)
 from services.tasks import (
     load_tasks,
+    mark_as_complete,
+    search_overdue_tasks,
     search_task_by_id,
     search_tasks_by_date,
     search_upcoming_tasks,
-    mark_as_complete,
-    search_overdue_tasks,
 )
-from services.auth import (
-    login_required,
-    login_user,
-    create_user,
-    password_reset,
-    password_change,
-    password_reset_required,
-)
-from flask import (
-    Flask,
-    current_app,
-    render_template,
-    send_from_directory,
-    url_for,
-    redirect,
-    request,
-    session,
-    flash,
-    Response,
-    abort,
-)
-from services.database import (
-    find_task_by_id,
-    find_user_by_id,
-    get_task_logs,
-    get_all_task_logs,
-    add_log,
-    update_task_fields,
-    delete_task_by_id,
-    add_new_task,
-    get_completed_tasks,
-    get_incomplete_tasks,
-    search_for_tasks,
-    get_all_tasks,
-)
-from flask_wtf.csrf import CSRFProtect, CSRFError
-from datetime import timedelta, datetime
-from services.config import initialise
-from flask_session import Session
-from dotenv import load_dotenv
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-import os
 
 load_dotenv()
 
@@ -501,6 +503,7 @@ def csrf_error(error):
 def max_requests(error):
     return render_template("error/429.html"), 429
 
+
 @app.errorhandler(403)
 def forbidden(error):
     return render_template("error/403.html"), 403
@@ -519,6 +522,7 @@ def bad_request(error):
 @app.errorhandler(500)
 def server_error(error):
     return render_template("error/500.html"), 500
+
 
 # changed to port 10000 from 5000 as render uses this for public url to work
 
